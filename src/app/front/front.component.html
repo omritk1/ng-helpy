@@ -1,0 +1,8 @@
+<form #myForm="ngForm">
+
+
+<input type="email" name="username" required value="" #username="ngModel" [(ngModel)]="user.name">
+<input type="password" name="password" value="" #password="ngModel" [(ngModel)]="user.password">
+
+<button type="submit" name="button" (click)="postToServer()">submit</button>
+</form>

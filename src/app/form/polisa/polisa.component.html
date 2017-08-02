@@ -1,0 +1,40 @@
+<form #polisaForm="ngForm" class="polisaForm" novalidate>
+    <div class="tab-pane fade in active">
+        <div class='row'>
+            <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <div class="row">
+
+                <h3 class="are-you-polisa-owner">האם אתה בעל הפוליסה</h3>
+                                          <div class="radio">
+                                              <label>
+                                                  <input type="radio" #polisaOwner="ngModel" required name="polisa-owner" [(ngModel)]="polisa-owner" value="אני בעל הפוליסה">
+                                                  <br>
+                                                  <span>כן</span>
+                                              </label>
+
+                                              <label>
+                                                  <input type="radio" #polisaOwner="ngModel" required name="polisa-owner" [(ngModel)]="polisa-owner" value="אני לא בעל הפוליסה">
+                                                  <br>
+                                                  <span>לא</span>
+                                              </label>
+                                          </div>
+
+        <div class="form-group">
+            <input class="form-control input-md" #carNumber="ngModel" required id="carNumber" name="carNumber" type="number" pattern="[0-9]{7,8}" [(ngModel)]="polisa.carNumber">
+            <div class="alert alert-danger" [hidden]="carNumber.valid">יש להזין מספר רכב תקין</div>
+        </div>
+
+
+
+
+
+                                          <div class="form-group text-center space-20">
+
+                                                          <button uiSref="address" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
+                                                      </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

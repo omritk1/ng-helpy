@@ -1,0 +1,129 @@
+@media screen and (min-width: 720px) {
+.logo_big {
+    width: 20% !important;
+    float: left !important;
+    position: absolut !important;
+    margin-left: 30% !important;
+    margin-top: 5% !important;
+}
+.white-cube {
+    float: left !important;
+    width: 10% !important;
+}
+
+img.call-bunner {
+     display:none !important;
+}
+
+button.start-button {
+    float: right !important;
+    margin-top: 8% !important;
+    margin-right: 34% !important;
+    font-size: 22px !important;
+    font-weight: 200 !important;
+    color: white !important;
+    width: 30% !important;
+}
+
+.logo {
+    width: 5.5%!important;
+    margin-left: 45% !important;
+}
+
+.form {
+    max-width: 20% !important;
+    float: left !important;
+    margin-left: 25%!important;
+}
+
+input#goNextPage {
+    width: 30% !important;
+}
+
+#mainform123 .class123-pagination {
+    position: fixed !important;
+    left: 15% !important;
+    bottom: -19px !important;
+    float: left !important;
+    margin-left: 28% !important;
+}
+
+}
+
+
+
+*{
+    font-family: 'Open Sans Hebrew',Helvetica, ArialHebrew-Light  !important;
+}
+
+#search,header,footer{
+	display:none;
+}
+
+
+
+.page-header{
+	background: #f4f4f4;
+	height: 70px;
+	box-shadow: 0.1px 0.1px 3px 0px #b9b9b9;
+      margin: 0px;
+
+}
+
+.cube{
+	float: left;
+	width: 28px;
+	padding-top: 20px;
+	padding-left: 8px;
+}
+
+.logo{
+	width: 22%;
+	margin-left: 28%;
+	float: left;
+	margin-top: 15px;
+}
+
+.phone{
+	float: right;
+	width: 32px;
+	padding-right: 8px;
+
+}
+
+.white-cube{
+   float: left;
+   width: 135px;
+   padding-top: px;
+   padding-left: 8px;
+}
+
+
+.logo_big {
+    width: 70%;
+    float: left;
+	position: absolut;
+    margin-left: 15%;
+	margin-top: 25%;
+}
+
+
+button.start-button {
+    float: left;
+	margin-top: 15%;
+    margin-left: 5%;
+    font-size: 18px;
+	font-weight: 200;
+    color: white;
+    width: 90%;
+    border: solid 2px #ffffff;
+    border-radius: 25px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0);
+}
+
+img.call-bunner {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
