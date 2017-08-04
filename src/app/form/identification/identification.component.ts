@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./identification.component.css']
 })
 export class IdentificationComponent implements OnInit {
+  public identification = {
 
+  };
   constructor() { }
 
   ngOnInit() {
