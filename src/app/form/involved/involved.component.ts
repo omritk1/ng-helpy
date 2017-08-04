@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./involved.component.css']
 })
 export class InvolvedComponent implements OnInit {
+  public envolved = {
 
+  };
+
+  public noEnv = false;
   constructor() { }
 
   ngOnInit() {
