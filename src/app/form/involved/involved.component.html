@@ -10,7 +10,7 @@
 
 
                     <div class="form-group" [hidden]="noEnv">
-                      <input class="btn btn-primary" #envolveOne="ngModel" [required]="!noEnv"  id="envolveOne" name="envolveOne" type="file" placeholder="פוליסת ביטוח" accept="image/*;capture=camera" [(ngModel)]="envolved.envolveOne">
+                      <input class="btn btn-primary" #envolveOne="ngModel" [required]="!noEnv"  id="envolveOne" name="envolveOne" type="file" placeholder="פוליסת ביטוח" data-buttonText="בחר קובץ" accept="image/*;capture=camera" [(ngModel)]="envolved.envolveOne">
                     </div>
 
                     <div class="form-group" [hidden]="noEnv">

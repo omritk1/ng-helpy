@@ -20,12 +20,12 @@
                     </div>
 
                     <div class="form-group">
-                        <input class="form-control input-md" #carNumber="ngModel" required id="carNumber" name="carNumber" type="number" pattern="[0-9]{7,8}" [(ngModel)]="polisa.carNumber">
+                        <input class="form-control input-md" #carNumber="ngModel" required id="carNumber" placeholder="הזן את מספר הרכב הרלוונטי" name="carNumber" type="number" pattern="[0-9]{7,8}" [(ngModel)]="polisa.carNumber">
                         <div class="alert alert-danger" [hidden]="carNumber.valid">יש להזין מספר רכב תקין</div>
                     </div>
 
                     <div class="form-group" [hidden]="showUpload">
-                      <input class="btn btn-primary" #licenceNumber="ngModel" [required]="!showUpload" id="licenceNumber" name="licenceNumber" type="file" accept="image/*;capture=camera" [(ngModel)]="polisa.licenceNumber">
+                      <input class="btn btn-primary" #licenceNumber="ngModel" [required]="!showUpload" id="licenceNumber" name="licenceNumber"  type="file" accept="image/*;capture=camera" [(ngModel)]="polisa.licenceNumber">
                     </div>
 
                     <div class="form-group text-center space-20">

@@ -1,7 +1,10 @@
 *{
   direction: rtl;
 }
-
-/*body {
-    overflow-x: hidden;
-}*/
+.alert-danger {
+    margin-top: 2px;
+    margin-right: 1.5%;
+    width: 97%;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
