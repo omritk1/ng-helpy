@@ -9,12 +9,12 @@
 
 
 
-                    <div class="form-group" [hidden]="noEnv">
-                      <input class="btn btn-primary" #envolveOne="ngModel" [required]="!noEnv"  id="envolveOne" name="envolveOne" type="file" placeholder="פוליסת ביטוח" data-buttonText="בחר קובץ" accept="image/*;capture=camera" [(ngModel)]="envolved.envolveOne">
+                    <div class="form-group" [hidden]="noEnv" *ngFor="let involved of involveds; $index as i">
+                      <input class="btn btn-primary" #envolveOne="ngModel" [required]="!noEnv"  id="envolveOne" name="envolveOne" type="file" placeholder="פוליסת ביטוח" data-buttonText="בחר קובץ" accept="image/*;capture=camera" [(ngModel)]="involved[i]">
                     </div>
 
                     <div class="form-group" [hidden]="noEnv">
-                      <button class="btn btn-primary" type="button" name="addEnv">הוסף מעורב נוסף</button>
+                      <button class="btn btn-primary" type="button" name="addEnv" (click)="addInvolved()">הוסף מעורב נוסף</button>
                     </div>
 
                     <div class="checkbox">
