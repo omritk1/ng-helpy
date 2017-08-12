@@ -15,6 +15,10 @@ export class InvolvedComponent implements OnInit {
     this.involved.push('');
   }
 
+  remInvolved(){
+    this.involved.pop();
+  }
+
   ngOnInit() {
   }
 
