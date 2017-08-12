@@ -1,0 +1,286 @@
+#btnControl0 {
+    display: none;
+}
+
+.btn0 {
+    width: 5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/1.png');
+
+
+}
+
+.btn0:active {
+
+    width: 5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/1.png');
+
+
+    background-repeat: no-repeat;
+}
+
+#btnControl0:checked + label {
+    width: 5%;
+    height: 95px;
+    background-image: url('../../../assets/img/1.1.png');
+    background-repeat: no-repeat;
+}
+
+
+
+
+#btnControl1 {
+    display: none;
+}
+
+.btn1 {
+    width: 5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/2.png');
+
+
+}
+
+.btn1:active {
+
+    width: 5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/2.png');
+
+
+    background-repeat: no-repeat;
+}
+
+#btnControl1:checked + label {
+    width: 5%;
+    height: 95px;
+    background-image: url('../../../assets/img/2.2.png');
+    background-repeat: no-repeat;
+}
+
+
+
+#btnControl2 {
+    display: none;
+}
+
+.btn2 {
+    width: 9.5%;
+    height: 106px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/3.png');
+
+}
+
+
+
+.btn2:active {
+
+    width: 9.5%;
+    height: 106px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/3.3.png');
+
+    background-repeat: no-repeat;
+}
+
+#btnControl2:checked + label {
+    width: 9.5%;
+    height: 106px;
+    background-image: url('../../../assets/img/3.3.png');
+    background-repeat: no-repeat;
+}
+
+
+
+
+#btnControl3 {
+    display: none;
+}
+
+.btn3 {
+    width: 3.5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/4.png');
+
+
+}
+
+
+
+.btn3:active {
+
+    width: 3.5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/4.4.png');
+
+    background-repeat: no-repeat;
+}
+
+#btnControl3:checked + label {
+    width: 3.5%;
+    height: 95px;
+    background-image: url('../../../assets/img/4.4.png');
+    background-repeat: no-repeat;
+}
+
+
+#btnControl4 {
+    display: none;
+}
+
+.btn4 {
+    width: 4.1%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/5.png');
+    margin-bottom: 10px;
+
+}
+
+
+
+.btn4:active {
+
+    width: 4.1%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/5.5.png');
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+}
+
+#btnControl4:checked + label {
+    width: 4.1%;
+    height: 95px;
+    background-image: url('../../../assets/img/5.5.png');
+    background-repeat: no-repeat;
+}
+
+
+#btnControl5 {
+    display: none;
+}
+
+.btn5 {
+    width: 5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/6.png');
+    margin-bottom: 10px;
+
+}
+
+
+
+.btn5:active {
+
+    width: 5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/6.6.png');
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+}
+
+#btnControl5:checked + label {
+    width: 5%;
+    height: 95px;
+    background-image: url('../../../assets/img/6.6.png');
+    background-repeat: no-repeat;
+}
+
+
+#btnControl6 {
+    display: none;
+}
+
+.btn6 {
+    width: 9.5%;
+    height: 106px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/7.png');
+
+
+}
+
+
+.btn6:active {
+
+    width: 9.5%;
+    height: 106px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/7.7.png');
+
+    background-repeat: no-repeat;
+}
+
+#btnControl6:checked + label {
+    width: 9.5%;
+    height: 106px;
+    background-image: url('../../../assets/img/7.7.png');
+    background-repeat: no-repeat;
+}
+
+
+#btnControl7 {
+    display: none;
+}
+
+.btn7 {
+    width: 3.5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/8.png');
+    margin-bottom: 10px;
+
+}
+
+
+
+.btn7:active {
+
+    width: 3.5%;
+    height: 95px;
+    display: inline-block;
+    position: relative;
+    background-image: url('../../../assets/img/8.8.png');
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+}
+
+#btnControl7:checked + label {
+    width: 3.5%;
+    height: 95px;
+    background-image: url('../../../assets/img/8.8.png');
+    background-repeat: no-repeat;
+}
+
+
+/*     -------   Hover  --------
+.btn:hover {
+    background-image: url('../../../assets/img/selectHover.jpg');
+}
+*/

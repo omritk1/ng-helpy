@@ -1,6 +1,46 @@
-<div class="row">
-  <div class="col-xs-3 col-sm-3">.col-6 .col-sm-3</div>
-  <div class="col-xs-3 col-sm-3">.col-6 .col-sm-3</div>
-  <div class="col-xs-3 col-sm-3">.col-6 .col-sm-3</div>
-  <div class="col-xs-3 col-sm-3">.col-6 .col-sm-3</div>
-</div>
+<form #hitForm="ngForm" class="hitForm" novalidate>
+    <div class="tab-pane fade in active">
+        <div class='row'>
+            <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <div class="row">
+                <h3 class="hit-chk-h3">סמן את מיקום הפגיעה ברכב שלך</h3>
+
+                    <div class="row">
+                      <input type="checkbox" id="btnControl0"/>
+                      <label class="btn0" for="btnControl0"> </label>
+
+                      <input type="checkbox" id="btnControl1"/>
+                      <label class="btn1" for="btnControl1"> </label>
+
+                      <input type="checkbox" id="btnControl2"/>
+                      <label class="btn2" for="btnControl2"> </label>
+
+                      <input type="checkbox" id="btnControl3"/>
+                      <label class="btn3" for="btnControl3"> </label>
+                      <br>
+                      <input type="checkbox" id="btnControl4"/>
+                      <label class="btn4" for="btnControl4"> </label>
+
+                      <input type="checkbox" id="btnControl5"/>
+                      <label class="btn5" for="btnControl5"> </label>
+
+                      <input type="checkbox" id="btnControl6"/>
+                      <label class="btn6" for="btnControl6"> </label>
+
+                      <input type="checkbox" id="btnControl7"/>
+                      <label class="btn7" for="btnControl7"> </label>
+                    </div>
+
+                  <h3 class="hit-pic-h3">צלם את מיקום הפגיעה ברכב שלך</h3>
+                      <input id="hits" #hits="ngModel" name="hits" type="file"
+                         accept="image/*;capture=camera" [(ngModel)]="hit">
+
+                    <div class="form-group text-center space-20">
+                        <button routerLink="/case" class="btn btn-outline-rounded btn-info" [disabled]="!hitForm.valid" (click)="save(hitForm)"> המשך בהגשת התביעה </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

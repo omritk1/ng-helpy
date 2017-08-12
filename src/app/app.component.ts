@@ -13,13 +13,5 @@ export class AppComponent {
     password: ""
   };
 
-// postToServer(){
-//
-//   console.log(this.user);
-// }
-
-constructor(private x:Http){
-  this.x.post('nativ', this.user).subscribe()
-}
 
 }
