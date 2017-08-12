@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./involved.component.css']
 })
 export class InvolvedComponent implements OnInit {
-  public involveds = [];
+  public involved = [];
   public noEnv = false;
 
   constructor() { }
 
   addInvolved() {
-    this.involveds.push('');
+    this.involved.push('');
   }
 
   ngOnInit() {

@@ -5,3 +5,10 @@ input.ng-invalid.ng-dirty{
 .helpy-nav{
       margin-top: -1%;
 }
+
+.footer{
+  position: fixed;
+  bottom: 1px;
+  text-align: center;
+  width: 100%;
+}

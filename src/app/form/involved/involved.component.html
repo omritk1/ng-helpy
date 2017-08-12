@@ -9,17 +9,18 @@
 
 
 
-                    <div class="form-group" [hidden]="noEnv" *ngFor="let involved of involveds; $index as i">
-                      <input class="btn btn-primary" #envolveOne="ngModel" [required]="!noEnv"  id="envolveOne" name="envolveOne" type="file" placeholder="פוליסת ביטוח" data-buttonText="בחר קובץ" accept="image/*;capture=camera" [(ngModel)]="involved[i]">
+                    <div class="form-group" [hidden]="noEnv" *ngFor="let involve of involved; $index as i">
+                      <input id="envolveOne" class="btn btn-primary" #envolveOne="ngModel" [required]="!noEnv" name="envolveOne" type="file"
+                      accept="image/*;capture=camera" [(ngModel)]="involved[i]">
                     </div>
 
                     <div class="form-group" [hidden]="noEnv">
-                      <button class="btn btn-primary" type="button" name="addEnv" (click)="addInvolved()">הוסף מעורב נוסף</button>
+                      <button class="btn btn-primary" type="button" name="addEnv" (click)="addInvolved()">הוסף מעורב</button>
                     </div>
 
                     <div class="checkbox">
                         <label>
-                            <input [checked]="noEnv" (change)="noEnv = !noEnv" type="checkbox" #noEnvolved="ngModel" name="noEnvolved" [(ngModel)]="no-envolved" value="תאונה עצמית - אין מעורבים נוספים">
+                            <input [required]="involved.length == 0" [checked]="noEnv" (change)="noEnv = !noEnv" type="checkbox" #noEnvolved="ngModel" name="noEnvolved" [(ngModel)]="no-envolved" value="תאונה עצמית - אין מעורבים נוספים">
                             <span>לא היו מעורבים בתאונה מלבדי</span>
                         </label>
                     </div>
@@ -27,7 +28,7 @@
                         <h5 class="involved-dit-h5 alert alert-info" [hidden]="!noEnv">שים לב! סימנת כי אף אחד לא נפגע בתאונה מלבדך, ניתן להמשיך לשלב הבא.</h5>
 
                     <div class="form-group text-center space-20">
-                        <button uiSref="address" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
+                        <button routerLink="/hit" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
                     </div>
 
                 </div>
