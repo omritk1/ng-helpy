@@ -3,7 +3,8 @@
 }
 
 .btn0 {
-    width: 5%;
+  width: 10%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -14,7 +15,8 @@
 
 .btn0:active {
 
-    width: 5%;
+  width: 10%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -25,7 +27,8 @@
 }
 
 #btnControl0:checked + label {
-    width: 5%;
+  width: 10%;
+  overflow: hidden;
     height: 95px;
     background-image: url('../../../assets/img/1.1.png');
     background-repeat: no-repeat;
@@ -39,7 +42,8 @@
 }
 
 .btn1 {
-    width: 5%;
+  width: 14%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -50,7 +54,8 @@
 
 .btn1:active {
 
-    width: 5%;
+  width: 14%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -61,7 +66,8 @@
 }
 
 #btnControl1:checked + label {
-    width: 5%;
+  width: 14%;
+  overflow: hidden;
     height: 95px;
     background-image: url('../../../assets/img/2.2.png');
     background-repeat: no-repeat;
@@ -74,7 +80,8 @@
 }
 
 .btn2 {
-    width: 9.5%;
+  width: 23%;
+  overflow: hidden;
     height: 106px;
     display: inline-block;
     position: relative;
@@ -86,7 +93,8 @@
 
 .btn2:active {
 
-    width: 9.5%;
+  width: 23%;
+  overflow: hidden;
     height: 106px;
     display: inline-block;
     position: relative;
@@ -96,7 +104,8 @@
 }
 
 #btnControl2:checked + label {
-    width: 9.5%;
+  width: 23%;
+  overflow: hidden;
     height: 106px;
     background-image: url('../../../assets/img/3.3.png');
     background-repeat: no-repeat;
@@ -110,7 +119,8 @@
 }
 
 .btn3 {
-    width: 3.5%;
+  width: 8.6%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -123,7 +133,8 @@
 
 .btn3:active {
 
-    width: 3.5%;
+  width: 8.6%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -133,7 +144,8 @@
 }
 
 #btnControl3:checked + label {
-    width: 3.5%;
+  width: 8.6%;
+  overflow: hidden;
     height: 95px;
     background-image: url('../../../assets/img/4.4.png');
     background-repeat: no-repeat;
@@ -145,7 +157,8 @@
 }
 
 .btn4 {
-    width: 4.1%;
+  width: 10%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -158,7 +171,8 @@
 
 .btn4:active {
 
-    width: 4.1%;
+  width: 10%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -168,7 +182,8 @@
 }
 
 #btnControl4:checked + label {
-    width: 4.1%;
+  width: 10%;
+  overflow: hidden;
     height: 95px;
     background-image: url('../../../assets/img/5.5.png');
     background-repeat: no-repeat;
@@ -180,7 +195,8 @@
 }
 
 .btn5 {
-    width: 5%;
+  width: 14%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -193,7 +209,8 @@
 
 .btn5:active {
 
-    width: 5%;
+  width: 14%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -203,7 +220,8 @@
 }
 
 #btnControl5:checked + label {
-    width: 5%;
+  width: 14%;
+  overflow: hidden;
     height: 95px;
     background-image: url('../../../assets/img/6.6.png');
     background-repeat: no-repeat;
@@ -215,8 +233,10 @@
 }
 
 .btn6 {
-    width: 9.5%;
+  width: 23%;
+  overflow: hidden;
     height: 106px;
+    margin-bottom: -1px;
     display: inline-block;
     position: relative;
     background-image: url('../../../assets/img/7.png');
@@ -227,9 +247,11 @@
 
 .btn6:active {
 
-    width: 9.5%;
+  width: 23%;
+  overflow: hidden;
     height: 106px;
     display: inline-block;
+    margin-bottom: -1px;
     position: relative;
     background-image: url('../../../assets/img/7.7.png');
 
@@ -237,7 +259,9 @@
 }
 
 #btnControl6:checked + label {
-    width: 9.5%;
+  width: 23%;
+  overflow: hidden;
+  margin-bottom: -1px;
     height: 106px;
     background-image: url('../../../assets/img/7.7.png');
     background-repeat: no-repeat;
@@ -249,7 +273,8 @@
 }
 
 .btn7 {
-    width: 3.5%;
+  width: 8.6%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -262,7 +287,8 @@
 
 .btn7:active {
 
-    width: 3.5%;
+  width: 8.6%;
+  overflow: hidden;
     height: 95px;
     display: inline-block;
     position: relative;
@@ -272,7 +298,8 @@
 }
 
 #btnControl7:checked + label {
-    width: 3.5%;
+  width: 8.6%;
+  overflow: hidden;
     height: 95px;
     background-image: url('../../../assets/img/8.8.png');
     background-repeat: no-repeat;
