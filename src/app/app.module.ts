@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { Routes, RouterModule } from "@angular/router";
+import { Ng2FileInputModule } from 'ng2-file-input';
+import { Ng2FileRequiredModule } from 'ng2-file-required';
+
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -13,6 +16,7 @@ import { InvolvedComponent } from './form/involved/involved.component';
 import { HitComponent } from './form/hit/hit.component';
 import { CaseComponent } from './form/case/case.component';
 import { PaginationComponent } from './pagination/pagination.component';
+
 
 const appRoutes: Routes = [
 
@@ -42,6 +46,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    Ng2FileRequiredModule,
+    Ng2FileInputModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
 
