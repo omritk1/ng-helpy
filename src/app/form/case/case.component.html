@@ -1,3 +1,55 @@
-<p>
-  case works!
-</p>
+<form #caseForm="ngForm" class="caseForm" novalidate>
+    <div class="tab-pane fade in active">
+        <div class='row'>
+            <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <div class="row">
+
+                  <h3 class="involved-dit-h3">ספר לנו על פרטי המקרה</h3>
+                  <input type="date" name="" value="">
+                  <input type="time" name="" value="">
+                  <br>
+                  <br>
+                  <input type="text" name="" value="">
+                  <input type="text" name="" value="">
+                  <h3 class="involved-dit-h3">תיאור המקרה והתרחשות האירועים</h3>
+                  <textarea name="name" rows="8" cols="80"></textarea>
+<hr>
+                  <h3 class="involved-dit-h3">האם היו עדים בתאונה?</h3>
+
+
+                    <div class="form-group"  *ngFor="let witness of witnesses; let i=index">
+                      <div class="row" *ngIf="i<5">
+                        <button class="btn btn-primary col-xs-2 col-sm-2" type="button" name="RemoveWitness" (click)="remWitness()">מחק עד</button>
+
+                        <input class="col-xs-4 col-sm-4" id="drivingLicence" #drivingLicence="ngModel" [required]="!noEnv" name="drivingLicence" type="file"
+                               accept="image/*;capture=camera" [(ngModel)]="witness[i]">
+                        <input class="col-xs-4 col-sm-4" id="insurancePolicy" #insurancePolicy="ngModel" [required]="!noEnv" name="insurancePolicy" type="file"
+                               accept="image/*;capture=camera" [(ngModel)]="witness[i]">
+
+                       <i class="fa fa-user" aria-hidden="true"></i>
+
+
+                      </div>
+                    </div>
+
+                    <div class="form-group" [hidden]="noWitness">
+                      <button class="btn btn-primary" type="button" name="addEnv" (click)="addWitness()"> הוסף עד</button>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input required type="checkbox">
+                            <span>קראתי את התקנון ואני מסכים לתנאי השימוש והמדיניות</span>
+                        </label>
+                    </div>
+
+
+                    <div class="form-group text-center space-20">
+                        <button routerLink="/hit" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,4 +1,4 @@
-<form #polisaForm="ngForm" class="envolvedForm" novalidate>
+<form #involvedForm="ngForm" class="involvedForm" novalidate>
     <div class="tab-pane fade in active">
         <div class='row'>
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
@@ -29,7 +29,7 @@
 
                     <div class="checkbox">
                         <label>
-                            <input [required]="involved.length == 0" [checked]="noEnv" (change)="noEnv = !noEnv" type="checkbox" #noEnvolved="ngModel" name="noEnvolved" [(ngModel)]="no-envolved" value="תאונה עצמית - אין מעורבים נוספים">
+                            <input [required]="involved.length == 0" [checked]="noEnv" (change)="noEnv = !noEnv" type="checkbox" #noEnvolved="ngModel" name="noInvolved" [(ngModel)]="noInvolved" value="תאונה עצמית - אין מעורבים נוספים">
                             <span>לא היו מעורבים בתאונה מלבדי</span>
                         </label>
                     </div>
@@ -37,7 +37,7 @@
                         <h5 class="involved-dit-h5 alert alert-info" [hidden]="!noEnv">שים לב! סימנת כי אף אחד לא נפגע בתאונה מלבדך, ניתן להמשיך לשלב הבא.</h5>
 
                     <div class="form-group text-center space-20">
-                        <button routerLink="/hit" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
+                        <button routerLink="/hit" class="btn btn-outline-rounded btn-info" [disabled]="!involvedForm.valid" (click)="save(involvedForm)"> המשך בהגשת התביעה </button>
                     </div>
 
                 </div>

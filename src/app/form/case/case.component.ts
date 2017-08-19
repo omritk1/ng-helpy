@@ -6,8 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./case.component.css']
 })
 export class CaseComponent implements OnInit {
+  public witnesses = [];
+  public noWitnesses = false;
 
   constructor() { }
+
+  addWitness() {
+    this.witnesses.push('');
+  }
+
+  remWitness(){
+    this.witnesses.pop();
+  }
 
   ngOnInit() {
   }
