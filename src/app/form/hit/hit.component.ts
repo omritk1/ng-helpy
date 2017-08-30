@@ -15,6 +15,11 @@ export class HitComponent implements OnInit {
     {"backRight":""},{"backDoorRight":""},{"frontDoorRight":""},{"frontRight":""}
 
   ];
+  public carImg = [
+    {"img1":""},
+    {"img2":""}
+
+  ];
 
   constructor() { }
 

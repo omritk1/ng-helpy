@@ -3,3 +3,6 @@
   background: #f4f4f4;
   border: solid 1px #1dc6c0;
 }
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}

@@ -8,10 +8,10 @@
 
 
 
-                <div class="car" (change)="selected = !selected && !selected = !selected " >
+                <div class="row car" (change)="selected = !selected && !selected = !selected " >
 
 
-                      <input [required]="selected" name="frontRight" #frontRight="ngModel" [(ngModel)]="hit.frontRight"
+                      <input [required]="selected" name="frontRight1"  [(ngModel)]="hit.frontRight"
                       type="checkbox" id="btnControl3" class="boxState"/>
                       <label class="btn3" for="btnControl3"> </label>
 
@@ -48,15 +48,11 @@
 
 
                   <h3 class="hit-pic-h3">צלם את מיקום הפגיעה ברכב שלך</h3>
-
-                          <ng2-file-input required="required"  name="myFile"
-                           [id]="'multiFilesInputWithPreview'" (onCouldNotRemove)="onCouldNotRemove($event)"
-                           [multiple]="true"  (onRemoved)="onRemoved($event)" (onAdded)="onAdded($event)"
-                           (onAction)="onAction($event)"  #hits="ngModel" [(ngModel)]="myFile"
-                           accept="image/*;capture=camera">
-                         </ng2-file-input>
-
-                    <div class="form-group text-center space-20">
+                  <label class="btn btn-default btn-file">
+                      <input  required multiple
+                       type="file" name="hits" [(ngModel)]="carImg.hits" #hits="ngModel" accept="image/*;capture=camera">
+                  </label>  
+                      <div class="form-group text-center space-20">
 
                       <button routerLink="/case"   class="btn btn-success btn-outline-rounded btn-info" [disabled]="!hitForm.valid" (click)="save(hitForm)"> המשך בהגשת התביעה </button>
                     </div>

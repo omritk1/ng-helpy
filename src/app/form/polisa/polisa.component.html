@@ -21,7 +21,7 @@
 
                     <div class="form-group">
                         <input class="form-control input-md" #carNumber="ngModel" required id="carNumber" placeholder="הזן את מספר הרכב הרלוונטי" name="carNumber" type="number" pattern="[0-9]{7,8}" [(ngModel)]="polisa.carNumber">
-                        <div class="alert alert-danger" [hidden]="carNumber.valid">יש להזין מספר רכב תקין</div>
+                        <div class="alert alert-danger" *ngIf="!carNumber.valid && carNumber.touched">יש להזין מספר רכב תקין</div>
                     </div>
 
                     <div class="form-group" [hidden]="showUpload">
