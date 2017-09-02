@@ -9,12 +9,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  public user= {
-    name:'',
-    password: ""
-  };
-  
+
   items: FirebaseListObservable<any[]>;
 
   constructor(db: AngularFireDatabase) {
