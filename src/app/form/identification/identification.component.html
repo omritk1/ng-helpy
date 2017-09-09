@@ -46,7 +46,7 @@
                 </div>
 
 
-<!-- 
+<!--
 <ul>
   <li *ngFor="let item of item | async">
     <input type="text" #updatetext [value]="id.text" />
@@ -62,10 +62,10 @@
 
 
                 <div class="form-group text-center">
-                    <button routerLink="/polisa"
-                     class="btn btn-success btn-outline-rounded btn-info"
+                    <button class="btn btn-success btn-outline-rounded btn-info"
                      [disabled]="!identificationForm.valid"
-                     (click)="save(identificationlForm)">
+                     (click)="save(identificationlForm)"
+                     routerLink="/polisa">
                      התחל בהגשת התביעה
                     </button>
                 </div>

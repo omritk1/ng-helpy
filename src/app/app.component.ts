@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -10,11 +9,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class AppComponent {
 
-  items: FirebaseListObservable<any[]>;
 
-  constructor(db: AngularFireDatabase) {
-  this.items = db.list('/items');
-}
 
 
 

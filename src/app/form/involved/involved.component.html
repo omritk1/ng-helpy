@@ -4,40 +4,78 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
+                <!-- Page title -->
                 <h3 class="involved-dit-h3">פרטי המעורבים</h3>
+
+                <!-- Involved title -->
                 <h5 class="involved-dit-h5" [hidden]="noEnv">צלם את המסמכים של המעורבים בתאונה מלבדך</h5>
 
+                <!-- Add new involve loop -->
+                    <div class="form-group" [hidden]="noEnv"
+                    *ngFor="let involve of involved; let i=index">
 
-
-                    <div class="form-group" [hidden]="noEnv" *ngFor="let involve of involved; let i=index">
                       <div class="row" *ngIf="i<5">
-                        <button class="btn btn-primary col-xs-2 col-sm-2" type="button" name="RemoveEnv" (click)="remInvolved()">מחק מעורב</button>
 
-                        <input class="col-xs-4 col-sm-4" id="drivingLicence" #drivingLicence="ngModel" [required]="!noEnv" name="drivingLicence" type="file"
-                               accept="image/*;capture=camera" [(ngModel)]="involved[i]">
-                        <input class="col-xs-4 col-sm-4" id="insurancePolicy" #insurancePolicy="ngModel" [required]="!noEnv" name="insurancePolicy" type="file"
-                               accept="image/*;capture=camera" [(ngModel)]="involved[i]">
+                <!-- Remove involved -->
+                        <button class="btn btn-primary col-xs-2 col-sm-2"
+                                type="button" name="RemoveEnv"
+                                (click)="remInvolved()">מחק מעורב
+                        </button>
 
-                       <img class="col-xs-2 col-sm-2" src="https://s3-us-west-2.amazonaws.com/userdata123/captainform/imagefields/6392/6392655.jpg" alt="The Pulpit Rock" width="62" height="55">
+                <!-- Driving licence input -->
+                        <input class="col-xs-4 col-sm-4" id="drivingLicence"
+                               [required]="!noEnv" name="drivingLicence"
+                               type="file" accept="image/*;capture=camera"
+                               #drivingLicenceRef="ngModel"
+                               [(ngModel)]="involved[i]">
 
+                <!-- Insurance policy input -->
+                        <input class="col-xs-4 col-sm-4" id="insurancePolicy"
+                               [required]="!noEnv" name="insurancePolicy"
+                               type="file" accept="image/*;capture=camera"
+                               #insurancePolicyRef="ngModel"
+                               [(ngModel)]="involved[i]">
+
+                <!-- Car img -->
+                       <img  class="col-xs-2 col-sm-2"
+                             src="https://s3-us-west-2.amazonaws.com/userdata123/captainform/imagefields/6392/6392655.jpg"
+                             alt="Car Image"
+                             width="62" height="55">
                       </div>
                     </div>
 
+                    <!-- Add new involve btn-->
                     <div class="form-group" [hidden]="noEnv">
-                      <button class="btn btn-primary" type="button" name="addEnv" (click)="addInvolved()">הוסף מעורב</button>
+                      <button class="btn btn-primary"
+                              type="button" name="addEnv"
+                              (click)="addInvolved()">הוסף מעורב
+                      </button>
                     </div>
 
+                    <!-- No involved checkbox -->
                     <div class="checkbox">
                         <label>
-                            <input [required]="involved.length == 0" [checked]="noEnv" (change)="noEnv = !noEnv" type="checkbox" #noEnvolved="ngModel" name="noInvolved" [(ngModel)]="noInvolved" value="תאונה עצמית - אין מעורבים נוספים">
+                            <input [required]="involved.length == 0"
+                                   [checked]="noEnv" (change)="noEnv = !noEnv"
+                                   type="checkbox" #noEnvolved="ngModel" name="noInvolved"
+                                   [(ngModel)]="noInvolved"
+                                   value="תאונה עצמית - אין מעורבים נוספים">
                             <span>לא היו מעורבים בתאונה מלבדי</span>
                         </label>
                     </div>
 
-                        <h5 class="involved-dit-h5 alert alert-info" [hidden]="!noEnv">שים לב! סימנת כי אף אחד לא נפגע בתאונה מלבדך, ניתן להמשיך לשלב הבא.</h5>
+                    <!-- No involved alert -->
+                        <h5 class="involved-dit-h5 alert alert-info"
+                            [hidden]="!noEnv">שים לב! סימנת כי אף אחד לא נפגע בתאונה מלבדך, ניתן להמשיך לשלב הבא.
+                        </h5>
 
+                    <!-- Next btn -->
                     <div class="form-group text-center space-20">
-                        <button routerLink="/hit" class="btn btn-outline-rounded btn-info" [disabled]="!involvedForm.valid" (click)="save(involvedForm)"> המשך בהגשת התביעה </button>
+                        <button routerLink="/hit"
+                                class="btn btn-outline-rounded btn-info"
+                                [disabled]="!involvedForm.valid"
+                                (click)="save(involvedForm)"> המשך בהגשת התביעה
+                        </button>
                     </div>
 
                 </div>
