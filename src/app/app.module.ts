@@ -5,6 +5,7 @@ import { HttpModule }    from '@angular/http';
 import { Routes, RouterModule } from "@angular/router";
 import { Ng2FileInputModule } from 'ng2-file-input';
 import { Ng2FileRequiredModule } from 'ng2-file-required';
+import { WebStorageModule } from 'ngx-store';
 
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     Ng2FileInputModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
+    WebStorageModule,
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
 
