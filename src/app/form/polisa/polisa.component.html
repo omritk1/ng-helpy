@@ -4,32 +4,70 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
+                <!-- Page Title -->
                 <h3 class="are-you-polisa-owner">האם אתה בעל הפוליסה</h3>
+
+                <!-- Polisa Ownership -->
                     <div class="radio">
+
+                <!-- IM The Polisa Owner -->
                         <label>
-                            <input (click)="hide()" type="radio" #polisaOwnerYes="ngModel" required name="polisa-owner" [(ngModel)]="polisa-owner" value="אני בעל הפוליסה">
+                            <input required name="polisa-owner"
+                                   (click)="hide()"
+                                   type="radio"
+                                   #polisaOwnerYes="ngModel"
+                                   [(ngModel)]="polisa-owner"
+                                   value="אני בעל הפוליסה">
                             <br>
                             <span>כן</span>
                         </label>
 
+                <!-- IM Not The Polisa Owner -->
                         <label>
-                            <input (click)="show()" type="radio" #polisaOwnerNo="ngModel" required name="polisa-owner" [(ngModel)]="polisa-owner" value="אני לא בעל הפוליסה">
+                            <input required name="polisa-owner"
+                                   type="radio"
+                                   #polisaOwnerNo="ngModel"
+                                   (click)="show()"
+                                   [(ngModel)]="polisa-owner"
+                                   value="אני לא בעל הפוליסה">
                             <br>
                             <span>לא</span>
                         </label>
                     </div>
 
+              <!-- Enter The Car Number -->
                     <div class="form-group">
-                        <input class="form-control input-md" #carNumber="ngModel" required id="carNumber" placeholder="הזן את מספר הרכב הרלוונטי" name="carNumber" type="number" pattern="[0-9]{7,8}" [(ngModel)]="polisa.carNumber">
-                        <div class="alert alert-danger" *ngIf="!carNumber.valid && carNumber.touched">יש להזין מספר רכב תקין</div>
+                        <input required class="form-control input-md" id="carNumber"
+                               name="carNumber"
+                               type="number" pattern="[0-9]{7,8}"
+                               placeholder="הזן את מספר הרכב הרלוונטי"
+                               #carNumber="ngModel"
+                               [(ngModel)]="polisa.carNumber">
+
+              <!-- Car Number Is Not Valid -->
+                        <div class="alert alert-danger"
+                             *ngIf="!carNumber.valid && carNumber.touched">יש להזין מספר רכב תקין
+                       </div>
                     </div>
 
+              <!-- Uploading The Driving Licence -->
                     <div class="form-group" [hidden]="showUpload">
-                      <input class="btn btn-primary" #licenceNumber="ngModel" [required]="!showUpload" id="licenceNumber" name="licenceNumber" type="file" accept="image/*;capture=camera" [(ngModel)]="polisa.licenceNumber">
+                      <label for="licenceNumber">אנו זקוקים לרשיון הנהיגה שלך</label>
+                      <input class="btn btn-primary" id="licenceNumber"
+                             [required]="!showUpload"
+                             name="licenceNumber"
+                             type="file" accept="image/*;capture=camera"
+                             #licenceNumber="ngModel"
+                             [(ngModel)]="polisa.licenceNumber">
                     </div>
 
+              <!-- Next -->
                     <div class="form-group text-center space-20">
-                        <button routerLink="/involved" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
+                        <button routerLink="/involved"
+                                class="btn btn-outline-rounded btn-info"
+                                [disabled]="!polisaForm.valid"
+                                (click)="save(polisaForm)"> המשך בהגשת התביעה
+                      </button>
                     </div>
 
                 </div>

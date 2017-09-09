@@ -4,57 +4,83 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
+                <!-- Page Title -->
                 <h3 class="hit-chk-h3">סמן את מיקום הפגיעה ברכב שלך</h3>
 
-
-
+        <!-- Car Div Start-->
                 <div class="row car" (change)="selected = !selected && !selected = !selected " >
 
-
-                      <input [required]="selected" name="frontRight1"  [(ngModel)]="hit.frontRight"
+                <!-- Car Front Right -->
+                      <input [required]="selected" name="frontRight"
+                      [(ngModel)]="hit.frontRight"
                       type="checkbox" id="btnControl3" class="boxState"/>
-                      <label class="btn3" for="btnControl3"> </label>
+                      <label class="btn3" for="btnControl3"></label>
 
-                      <input [required]="selected" name="frontDoorRight" #frontDoorRight="ngModel" [(ngModel)]="hit.frontDoorRight"
+                <!-- Front Door Right -->
+                      <input [required]="selected" name="frontDoorRight" #frontDoorRight="ngModel"
+                      [(ngModel)]="hit.frontDoorRight"
                       type="checkbox" id="btnControl2" class="boxState" />
-                      <label class="btn2" for="btnControl2"> </label>
+                      <label class="btn2" for="btnControl2"></label>
 
-                      <input [required]="selected" name="backDoorRight" #backDoorRight="ngModel" [(ngModel)]="hit.backDoorRight"
+                <!-- Back Door Right -->
+                      <input [required]="selected" name="backDoorRight" #backDoorRight="ngModel"
+                      [(ngModel)]="hit.backDoorRight"
                       type="checkbox" id="btnControl1" class="boxState"/>
-                      <label class="btn1" for="btnControl1"> </label>
+                      <label class="btn1" for="btnControl1"></label>
 
-                      <input [required]="selected" name="backRight" #backRight="ngModel" [(ngModel)]="hit.backRight"
+                <!-- Car Back Right -->
+                      <input [required]="selected" name="backRight" #backRight="ngModel"
+                      [(ngModel)]="hit.backRight"
                       type="checkbox" id="btnControl0" class="boxState"/>
-                      <label class="btn0" for="btnControl0"> </label>
+                      <label class="btn0" for="btnControl0"></label>
+
+
                       <br>
-                      <input [required]="selected" name="frontLeft" #frontLeft="ngModel" [(ngModel)]="hit.frontLeft"
+
+                <!-- Car Front Left -->
+                      <input [required]="selected" name="frontLeft" #frontLeft="ngModel"
+                      [(ngModel)]="hit.frontLeft"
                       type="checkbox" id="btnControl7" class="boxState"/>
-                      <label class="btn7" for="btnControl7"> </label>
+                      <label class="btn7" for="btnControl7"></label>
 
-                      <input [required]="selected" name="frontDoorLeft" #frontDoorLeft="ngModel" [(ngModel)]="hit.frontDoorLeft"
+                <!-- Front Door Left -->
+                      <input [required]="selected" name="frontDoorLeft" #frontDoorLeft="ngModel"
+                      [(ngModel)]="hit.frontDoorLeft"
                       type="checkbox" id="btnControl6" class="boxState"/>
-                      <label class="btn6" for="btnControl6"> </label>
+                      <label class="btn6" for="btnControl6"></label>
 
-                      <input [required]="selected" name="backDoorLeft" #backDoorLeft="ngModel" [(ngModel)]="hit.backDoorLeft"
-                       type="checkbox" id="btnControl5"/>
-                      <label class="btn5" for="btnControl5"> </label>
+                <!-- Back Door Left -->
+                      <input [required]="selected" name="backDoorLeft" #backDoorLeft="ngModel"
+                      [(ngModel)]="hit.backDoorLeft"
+                       type="checkbox" id="btnControl5" class="boxState"/>
+                      <label class="btn5" for="btnControl5"></label>
 
-                      <input [required]="selected" name="backLeft" class="boxState" type="checkbox" id="btnControl4"
-                       #backLeft="ngModel" [(ngModel)]="hit.backLeft"/>
-                      <label class="btn4" for="btnControl4"> </label>
+                <!-- Car Back Left -->
+                      <input [required]="selected" name="backLeft" #backLeft="ngModel"
+                        [(ngModel)]="hit.backLeft"
+                        type="checkbox" id="btnControl4" class="boxState"/>
+                      <label class="btn4" for="btnControl4"></label>
               </div>
+        <!-- End Of Car Div -->
 
 
-
-
+              <!-- Car Photos Upload -->
                   <h3 class="hit-pic-h3">צלם את מיקום הפגיעה ברכב שלך</h3>
                   <label class="btn btn-default btn-file">
                       <input  required multiple
-                       type="file" name="hits" [(ngModel)]="carImg.hits" #hits="ngModel" accept="image/*;capture=camera">
-                  </label>  
-                      <div class="form-group text-center space-20">
+                              name="hits"
+                              type="file" accept="image/*;capture=camera"
+                              [(ngModel)]="carImg.hits" #hits="ngModel">
+                  </label>
 
-                      <button routerLink="/case"   class="btn btn-success btn-outline-rounded btn-info" [disabled]="!hitForm.valid" (click)="save(hitForm)"> המשך בהגשת התביעה </button>
+
+              <!-- Next -->
+                      <div class="form-group text-center space-20">
+                      <button routerLink="/case"
+                              class="btn btn-success btn-outline-rounded btn-info"
+                              [disabled]="!hitForm.valid"
+                              (click)="save(hitForm)"> המשך בהגשת התביעה
+                      </button>
                     </div>
 
                 </div>
