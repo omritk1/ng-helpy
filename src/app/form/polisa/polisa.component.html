@@ -8,7 +8,8 @@
                 <h3 class="are-you-polisa-owner">האם אתה בעל הפוליסה</h3>
 
                 <!-- Polisa Ownership -->
-                    <div class="radio">
+                    <div class="radio"
+                    >
 
                 <!-- IM The Polisa Owner -->
                         <label>
@@ -16,7 +17,7 @@
                                    (click)="hide()"
                                    type="radio"
                                    #polisaOwnerYes="ngModel"
-                                   [(ngModel)]="polisa-owner"
+                                   [(ngModel)]="this.polisaOwner"
                                    value="אני בעל הפוליסה">
                             <br>
                             <span>כן</span>
@@ -28,7 +29,7 @@
                                    type="radio"
                                    #polisaOwnerNo="ngModel"
                                    (click)="show()"
-                                   [(ngModel)]="polisa-owner"
+                                   [(ngModel)]="this.polisaOwner"
                                    value="אני לא בעל הפוליסה">
                             <br>
                             <span>לא</span>
@@ -38,11 +39,11 @@
               <!-- Enter The Car Number -->
                     <div class="form-group">
                         <input required class="form-control input-md" id="carNumber"
-                               name="carNumber"
+                               name="myCarNumber"
                                type="number" pattern="[0-9]{7,8}"
                                placeholder="הזן את מספר הרכב הרלוונטי"
                                #carNumber="ngModel"
-                               [(ngModel)]="polisa.carNumber">
+                               [(ngModel)]="this.myCarNumber">
 
               <!-- Car Number Is Not Valid -->
                         <div class="alert alert-danger"

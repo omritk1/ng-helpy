@@ -10,9 +10,7 @@ import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
 export class IdentificationComponent {
 
 
-
-
-  @LocalStorage('this is my date') public dataOfBirth : number;
+  @LocalStorage('this Is my date') public dataOfBirth : number;
   @LocalStorage('This Is A Test') public userName: number;
   @LocalStorage('This Is My ID') public identification: number;
 

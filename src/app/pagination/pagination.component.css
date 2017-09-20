@@ -1,11 +1,13 @@
 .pagination>li>a, .pagination>li>span {
   border-radius: 50% !important;
   margin: 0 5px;
+  margin-bottom: 5px;
 
   }
   .pagination{
 
   padding-right: 0px;
-  
+
+
 
   }

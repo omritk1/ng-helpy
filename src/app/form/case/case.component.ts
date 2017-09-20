@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
 
 @Component({
   selector: 'app-case',
@@ -9,8 +10,21 @@ export class CaseComponent implements OnInit {
   public witnesses = [];
   public noWitnesses = false;
 
+  @LocalStorage('ExidentDate') public exDate;
+  @LocalStorage('ExidentTime') public exTime;
+  @LocalStorage('ExidentCity') public exCity : string;
+  @LocalStorage('ExidentStreet') public exStreet : string;
 
-  constructor() { }
+
+  constructor() {
+
+    this.exDate;
+    this.exTime;
+    this.exCity;
+    this.exStreet;
+
+
+  }
 
   addWitness() {
     this.witnesses.push('');

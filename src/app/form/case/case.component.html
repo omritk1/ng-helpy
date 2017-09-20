@@ -5,12 +5,31 @@
                 <div class="row">
 
                   <h3 class="involved-dit-h3">ספר לנו על פרטי המקרה</h3>
-                  <input required class="form-control" type="date" name="" value="">
-                  <input required class="form-control" type="time" name="" value="">
+                  <input required class="form-control"
+                  type="date"
+                  name="exDate"
+                  [(ngModel)]="this.exDate" >
+
+                  <input required class="form-control"
+                  type="time"
+                  name="exTime"
+                  [(ngModel)]="this.exTime">
+
                   <br>
                   <br>
-                  <input required class="form-control" type="text" name="" value="" placeholder="כתובת">
-                  <input required class="form-control" type="text" name="" value="" placeholder="עיר">
+
+                  <input required class="form-control"
+                  type="text"
+                  placeholder="הזן את הרחוב בו התרחשה התאונה"
+                  name="exStreet"
+                  [(ngModel)]="this.exStreet">
+
+                  <input required class="form-control"
+                  type="text"
+                  placeholder="הזן את העיר בה התרחשה התאונה"
+                  name="exCity"
+                  [(ngModel)]="this.exCity">
+
                   <h3 class="involved-dit-h3">תיאור המקרה והתרחשות האירועים</h3>
                   <textarea class="form-control" name="name" rows="8" cols="80"></textarea>
 <hr>
