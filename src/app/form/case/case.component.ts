@@ -9,6 +9,7 @@ export class CaseComponent implements OnInit {
   public witnesses = [];
   public noWitnesses = false;
 
+
   constructor() { }
 
   addWitness() {
@@ -18,6 +19,7 @@ export class CaseComponent implements OnInit {
   remWitness(){
     this.witnesses.pop();
   }
+
 
   ngOnInit() {
   }

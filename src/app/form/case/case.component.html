@@ -5,12 +5,12 @@
                 <div class="row">
 
                   <h3 class="involved-dit-h3">ספר לנו על פרטי המקרה</h3>
-                  <input class="form-control" type="date" name="" value="">
-                  <input class="form-control" type="time" name="" value="">
+                  <input required class="form-control" type="date" name="" value="">
+                  <input required class="form-control" type="time" name="" value="">
                   <br>
                   <br>
-                  <input class="form-control" type="text" name="" value="">
-                  <input class="form-control" type="text" name="" value="">
+                  <input required class="form-control" type="text" name="" value="" placeholder="כתובת">
+                  <input required class="form-control" type="text" name="" value="" placeholder="עיר">
                   <h3 class="involved-dit-h3">תיאור המקרה והתרחשות האירועים</h3>
                   <textarea class="form-control" name="name" rows="8" cols="80"></textarea>
 <hr>
@@ -18,23 +18,21 @@
 
 
                     <div class="form-group"  *ngFor="let witness of witnesses; let i=index">
+
                       <div class="row" *ngIf="i<5">
                         <button class="btn btn-primary col-xs-2 col-sm-2" type="button" name="RemoveWitness" (click)="remWitness()">מחק עד</button>
-
-                        <input class="col-xs-4 col-sm-4" id="drivingLicence" #drivingLicence="ngModel" [required]="!noEnv" name="drivingLicence" type="file"
-                               accept="image/*;capture=camera" [(ngModel)]="witness[i]">
-                        <input class="col-xs-4 col-sm-4" id="insurancePolicy" #insurancePolicy="ngModel" [required]="!noEnv" name="insurancePolicy" type="file"
-                               accept="image/*;capture=camera" [(ngModel)]="witness[i]">
-
-                       <i class="fa fa-user" aria-hidden="true"></i>
-
-
+                          <input class="col-xs-4 col-sm-4" id="drivingLicence" #drivingLicence="ngModel" [required]="!noEnv" name="drivingLicence" type="file"
+                                 accept="image/*;capture=camera" [(ngModel)]="witness[i]">
+                          <input class="col-xs-4 col-sm-4" id="insurancePolicy" #insurancePolicy="ngModel" [required]="!noEnv" name="insurancePolicy" type="file"
+                                 accept="image/*;capture=camera" [(ngModel)]="witness[i]">
+                           <i class="fa fa-user" aria-hidden="true"></i>
                       </div>
-                    </div>
 
+                    </div>
                     <div class="form-group" [hidden]="noWitness">
                       <button class="btn btn-primary" type="button" name="addEnv" (click)="addWitness()"> הוסף עד</button>
                     </div>
+
 
                     <div class="checkbox">
                         <label>
