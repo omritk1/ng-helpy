@@ -9,6 +9,7 @@ import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
 export class CaseComponent implements OnInit {
   public witnesses = [];
   public noWitnesses = false;
+  public click = 0;
 
   @LocalStorage('ExidentDate') public exDate;
   @LocalStorage('ExidentTime') public exTime;
@@ -28,10 +29,12 @@ export class CaseComponent implements OnInit {
 
   addWitness() {
     this.witnesses.push('');
+    this.click++;
   }
 
   remWitness(){
     this.witnesses.pop();
+    this.click--;
   }
 
 

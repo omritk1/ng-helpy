@@ -45,10 +45,12 @@
                     </div>
 
                     <!-- Add new involve btn-->
-                    <div class="form-group" [hidden]="noEnv">
+                    <div class="form-group" [hidden]="noEnvc || click==5">
                       <button class="btn btn-primary"
-                              type="button" name="addEnv"
-                              (click)="addInvolved()">הוסף מעורב
+                              type="button"
+                              name="addEnv"
+                              (click)="addInvolved()
+                              ">הוסף מעורב
                       </button>
                     </div>
 

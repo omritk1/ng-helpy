@@ -13,6 +13,7 @@ export class InvolvedComponent {
   @LocalStorage('insurancePolicy')  public insurancePolicy;
   @LocalStorage('drivingLicence')  public drivingLicence;
   public noEnv = false;
+  public click = 0;
 
 
   constructor() {
@@ -24,10 +25,13 @@ export class InvolvedComponent {
 
   addInvolved() {
     this.involved.push({});
+    this.click++;
+
   }
 
   remInvolved(){
     this.involved.pop();
+    this.click--;
   }
 
   ngOnInit() {
