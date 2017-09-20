@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule ,ReactiveFormsModule}   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { Routes, RouterModule } from "@angular/router";
-import { Ng2FileInputModule } from 'ng2-file-input';
 import { Ng2FileRequiredModule } from 'ng2-file-required';
 import { WebStorageModule } from 'ngx-store';
 
@@ -54,7 +53,6 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     Ng2FileRequiredModule,
-    Ng2FileInputModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     WebStorageModule,
