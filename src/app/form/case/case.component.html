@@ -51,13 +51,26 @@
 
                     <div class="form-group"  *ngFor="let witness of witnesses; let i=index">
 
-                      <div class="row" *ngIf="i<5">
-                        <button class="btn btn-primary col-xs-2 col-sm-2" type="button" name="RemoveWitness" (click)="remWitness()">מחק עד</button>
-                          <input class="col-xs-4 col-sm-4" id="drivingLicence" #drivingLicence="ngModel" [required]="!noEnv" name="drivingLicence" type="file"
-                                 accept="image/*;capture=camera" [(ngModel)]="witness[i]">
-                          <input class="col-xs-4 col-sm-4" id="insurancePolicy" #insurancePolicy="ngModel" [required]="!noEnv" name="insurancePolicy" type="file"
-                                 accept="image/*;capture=camera" [(ngModel)]="witness[i]">
-                           <i class="fa fa-user" aria-hidden="true"></i>
+                      <div class="row to-center" *ngIf="i<5">
+
+                        <button class="btn btn-primary col-xs-2 col-sm-2"
+                                type="button" name="RemoveWitness"
+                                (click)="remWitness()">מחק עד
+                        </button>
+                        <i class="fa fa-user fa-right" aria-hidden="true"></i>
+                        <label class="inline">שם מלא
+                          <input class="form-control witnesses"
+                                 placeholder="הזן שם מלא"
+                                 name="witnesNmae" type="text"
+                                 [(ngModel)]="witness[i]">
+                        </label>
+                        <label class="inline">טלפון
+                          <input class="form-control witnesses"
+                                 placeholder="הזן מספר טלפון"
+                                 name="witnesTel" type="phone"
+                                 [(ngModel)]="witness[i]">
+                        </label>
+
                       </div>
 
                     </div>
@@ -68,14 +81,20 @@
 
                     <div class="checkbox">
                         <label>
-                            <input required type="checkbox">
+                            <input
+                                   required type="checkbox"
+                                   [(ngModel)]="agreed"
+                                   (click)="agreedToTerms()"
+
+
+                            >
                             <span>קראתי את התקנון ואני מסכים לתנאי השימוש והמדיניות</span>
                         </label>
                     </div>
 
 
                     <div class="form-group text-center space-20">
-                        <button routerLink="/hit" class="btn btn-outline-rounded btn-info" [disabled]="!polisaForm.valid" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
+                        <button class="btn btn-outline-rounded btn-info" [disabled]="!caseForm.valid || !agreed" (click)="save(polisaForm)"> המשך בהגשת התביעה </button>
                     </div>
 
                 </div>

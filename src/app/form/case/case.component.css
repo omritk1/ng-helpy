@@ -9,3 +9,14 @@ label{
 .to-center{
   text-align: center;
 }
+.witnesses{
+  display: inline;
+  width: 30%;
+}
+.inline{
+  display: inline;
+}
+
+.fa-right{
+    margin-left: 53px;
+}

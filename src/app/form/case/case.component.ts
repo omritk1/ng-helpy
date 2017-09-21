@@ -10,6 +10,7 @@ export class CaseComponent implements OnInit {
   public witnesses = [];
   public noWitnesses = false;
   public click = 0;
+  public agreed = false;
 
 
   @LocalStorage('ExidentDate') public exDate;
@@ -40,6 +41,14 @@ export class CaseComponent implements OnInit {
     this.click--;
   }
 
+  agreedToTerms(){
+    if(this.agreed == false){
+      this.agreed = true
+    }
+    else{
+      this.agreed = false
+    }
+  }
 
   ngOnInit() {
   }
