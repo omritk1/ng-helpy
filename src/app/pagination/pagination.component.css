@@ -5,9 +5,9 @@
 
   }
   .pagination{
-
   padding-right: 0px;
+  }
 
-
-
+  .active{
+background: #ddd;
   }

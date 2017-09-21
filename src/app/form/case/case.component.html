@@ -4,36 +4,49 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
-                  <h3 class="involved-dit-h3">ספר לנו על פרטי המקרה</h3>
-                  <input required class="form-control"
-                  type="date"
-                  name="exDate"
-                  [(ngModel)]="this.exDate" >
 
-                  <input required class="form-control"
-                  type="time"
-                  name="exTime"
-                  [(ngModel)]="this.exTime">
+                  <h3 class="involved-dit-h3 to-center">ספר לנו על פרטי המקרה</h3>
+                  <div class="row to-center">
+                    <label>תאריך התאונה
+                      <input required class="form-control"
+                             type="date"
+                             name="exDate"
+                             [(ngModel)]="this.exDate" >
+                    </label>
+                    <label> שעת התאונה
+                      <input required class="form-control"
+                             type="time"
+                             name="exTime"
+                             [(ngModel)]="this.exTime">
+                     </label>
+                     <label> עיר
+                       <input required class="form-control"
+                              type="text"
+                              placeholder="העיר בה התרחשה התאונה"
+                              name="exCity"
+                              [(ngModel)]="this.exCity">
+                     </label>
+                    <label> רחוב
+                      <input required class="form-control"
+                             type="text"
+                             placeholder="הרחוב בו התרחשה התאונה"
+                             name="exStreet"
+                             [(ngModel)]="this.exStreet">
+                    </label>
 
-                  <br>
-                  <br>
+                  </div>
 
-                  <input required class="form-control"
-                  type="text"
-                  placeholder="הזן את הרחוב בו התרחשה התאונה"
-                  name="exStreet"
-                  [(ngModel)]="this.exStreet">
 
-                  <input required class="form-control"
-                  type="text"
-                  placeholder="הזן את העיר בה התרחשה התאונה"
-                  name="exCity"
-                  [(ngModel)]="this.exCity">
+                  <h3 class="involved-dit-h3 to-center">תיאור המקרה והתרחשות האירועים</h3>
+                      <textarea class="form-control"
+                      name="exDit"
+                      rows="8" cols="80"
+                      [(ngModel)]="this.exDit">
+                      </textarea>
 
-                  <h3 class="involved-dit-h3">תיאור המקרה והתרחשות האירועים</h3>
-                  <textarea class="form-control" name="name" rows="8" cols="80"></textarea>
-<hr>
-                  <h3 class="involved-dit-h3">האם היו עדים בתאונה?</h3>
+                <hr>
+
+                  <h3 class="involved-dit-h3 to-center">האם היו עדים בתאונה?</h3>
 
 
                     <div class="form-group"  *ngFor="let witness of witnesses; let i=index">
