@@ -4,12 +4,20 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
+                  <ul>
+                <li *ngFor="let item of items | async">
+                <button (click)="updateItem(item.$key, carNumber.value, polisaOwnerYes.value, polisaOwnerNo.value, licenceNumber.value )">Update</button>
+                <button (click)="deleteItem(item.$key)">Delete</button>
+                </li>
+                </ul>
+
+
+
                 <!-- Page Title -->
                 <h3 class="are-you-polisa-owner">האם אתה בעל הפוליסה</h3>
 
                 <!-- Polisa Ownership -->
-                    <div class="radio"
-                    >
+                    <div class="radio">
 
                 <!-- IM The Polisa Owner -->
                         <label>
@@ -43,7 +51,8 @@
                                type="number" pattern="[0-9]{7,8}"
                                placeholder="הזן את מספר הרכב הרלוונטי"
                                #carNumber="ngModel"
-                               [(ngModel)]="this.myCarNumber">
+                               [(ngModel)]="this.myCarNumber"
+                               >
 
               <!-- Car Number Is Not Valid -->
                         <div class="alert alert-danger"

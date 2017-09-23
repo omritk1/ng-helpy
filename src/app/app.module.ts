@@ -25,6 +25,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 
 
 
+
 const appRoutes: Routes = [
 
   { path: '', component: IdentificationComponent},
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     InvolvedComponent,
     HitComponent,
     CaseComponent,
-    PaginationComponent
+    PaginationComponent,
+
   ],
   imports: [
     BrowserModule,

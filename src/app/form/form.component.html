@@ -1,13 +1,7 @@
-<app-identification></app-identification>
-<!-- this needs to be deleted after -->
-<h5 class="ltr">ID - step 1</h5>
-<hr>
-<app-polisa></app-polisa>
-<!-- this needs to be deleted after -->
-<h5 class="ltr">Polisa - step 2</h5>
-<hr>
-<app-involved></app-involved>
-<!-- this needs to be deleted after -->
-<h5 class="ltr">Involved - step 3</h5>
-<hr>
-<app-hit></app-hit>
+<ul>
+<li *ngFor="let item of items | async">
+<input type="text" #updatetext [value]="item.newitem" />
+<button (click)="updateItem(item.$key, updatetext.value)">Update</button>
+<button (click)="deleteItem(item.$key)">Delete</button>
+</li>
+</ul>

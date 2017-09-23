@@ -14,7 +14,6 @@ export class IdentificationComponent {
   @LocalStorage('This Is A Test') public userName: number;
   @LocalStorage('This Is My ID') public identification: number;
 
-  item: FirebaseObjectObservable<any>;
   Idn: FirebaseObjectObservable<any>;
   Date: FirebaseObjectObservable<any>;
   items: FirebaseListObservable<any>;
@@ -26,34 +25,19 @@ export class IdentificationComponent {
 
 
 
-      this.items = db.list('/messages');
-      this.item = db.object('/item');
-      this.Idn = db.object('/Idn');
-      this.Date = db.object('/Date');
-
-    }
-    addItem(newName: string) {
-      this.items.push({ text: newName });
+      this.items = db.list('/cases');
     }
 
-    addIdn(identification: number){
-      this.items.push({Idn: identification})
+    addItem(x: string, y:number, z:number) {
+    this.items.push({ name: x, id: y, date: z});
     }
-
-    addDate(dataOfBirth: number){
-      this.items.push({Date: dataOfBirth})
-    }
-
     updateItem(key: string, newText: string) {
-      this.items.update(key, { text: newText });
+    this.items.update(key, { text: newText });
     }
     deleteItem(key: string) {
-      this.items.remove(key);
+    this.items.remove(key);
     }
     deleteEverything() {
-      this.items.remove();
+    this.items.remove();
     }
-
-
-
 }

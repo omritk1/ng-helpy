@@ -15,9 +15,26 @@ export class PolisaComponent {
   public showUpload = true;
   public polisa = {};
 
+
+  items: FirebaseListObservable<any>;
+
+
 constructor(db: AngularFireDatabase) {
   this.myCarNumber;
+
+this.items = db.list('/cases');
 }
+
+updateItem(key: string, x: number, y: string, z: string, w) {
+this.items.update(key, { carNumber: x , polisaOwnership: y, DVL:w});
+}
+deleteItem(key: string) {
+this.items.remove(key);
+}
+
+
+
+
 
 show(){
   this.showUpload = false;
