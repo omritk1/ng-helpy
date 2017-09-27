@@ -11,6 +11,8 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { UploadService } from './uploads/shared/upload.service';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +24,7 @@ import { InvolvedComponent } from './form/involved/involved.component';
 import { HitComponent } from './form/hit/hit.component';
 import { CaseComponent } from './form/case/case.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
 
 
 
@@ -49,6 +52,7 @@ const appRoutes: Routes = [
     HitComponent,
     CaseComponent,
     PaginationComponent,
+    UploadFormComponent,
 
   ],
   imports: [
@@ -63,6 +67,7 @@ const appRoutes: Routes = [
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
 
   ],
+  providers: [AngularFireDatabase, UploadService],
 
   bootstrap: [AppComponent]
 })
