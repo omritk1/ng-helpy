@@ -4,13 +4,6 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
-                  <ul>
-                <li *ngFor="let item of items | async">
-                <button (click)="updateItem(item.$key, carNumber.value, polisaOwnerYes.value, polisaOwnerNo.value, licenceNumber.value )">Update</button>
-                <button (click)="deleteItem(item.$key)">Delete</button>
-                </li>
-                </ul>
-
 
 
                 <!-- Page Title -->
@@ -63,22 +56,29 @@
               <!-- Uploading The Driving Licence -->
                     <div class="form-group" [hidden]="showUpload">
                       <label for="licenceNumber">אנו זקוקים לרשיון הנהיגה שלך</label>
-                      <input class="btn btn-primary" id="licenceNumber"
+                     <upload-form
                              [required]="!showUpload"
                              name="licenceNumber"
-                             type="file" accept="image/*;capture=camera"
                              #licenceNumber="ngModel"
-                             [(ngModel)]="polisa.licenceNumber">
+                             [(ngModel)]="polisa.licenceNumber"
+                             >
+                     </upload-form>
                     </div>
 
+
               <!-- Next -->
-                    <div class="form-group text-center space-20">
-                        <button routerLink="/involved"
+                    <div *ngFor="let item of items | async ;let last = last"
+                    class="form-group text-center space-20">
+                        <button *ngIf="last"
+                                routerLink="/involved"
                                 class="btn btn-outline-rounded btn-info"
                                 [disabled]="!polisaForm.valid"
-                                (click)="save(polisaForm)"> המשך בהגשת התביעה
+                                (click)="updateItem(item.$key, carNumber.value,polisaOwnerYes.value,polisaOwnerNo.value)"> המשך בהגשת התביעה
                       </button>
+
                     </div>
+
+
 
                 </div>
             </div>

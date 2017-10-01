@@ -11,16 +11,13 @@ export class IdentificationComponent {
 
 
   @LocalStorage('this Is my date') public dataOfBirth : number;
-  @LocalStorage('This Is A Test') public userName: number;
   @LocalStorage('This Is My ID') public identification: number;
 
-  Idn: FirebaseObjectObservable<any>;
-  Date: FirebaseObjectObservable<any>;
+
   items: FirebaseListObservable<any>;
 
     constructor(db: AngularFireDatabase) {
       this.dataOfBirth;
-      this.userName;
       this.identification;
 
 
@@ -28,8 +25,8 @@ export class IdentificationComponent {
       this.items = db.list('/cases');
     }
 
-    addItem(x: string, y:number, z:number) {
-    this.items.push({ name: x, id: y, date: z});
+    addItem( id:number, date:number) {
+    this.items.push({ id: id, date: date});
     }
     updateItem(key: string, newText: string) {
     this.items.update(key, { text: newText });

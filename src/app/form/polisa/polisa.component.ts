@@ -25,8 +25,8 @@ constructor(db: AngularFireDatabase) {
 this.items = db.list('/cases');
 }
 
-updateItem(key: string, x: number, y: string, z: string, w) {
-this.items.update(key, { carNumber: x , polisaOwnership: y, DVL:w});
+updateItem(key: string, carNumber: number, yes, no) {
+this.items.update(key, { carNumber: carNumber, polisaOwnership:yes || no });
 }
 deleteItem(key: string) {
 this.items.remove(key);

@@ -23,19 +23,24 @@
                         </button>
 
                 <!-- Driving licence input -->
-                        <input class="col-xs-4 col-sm-4" id="drivingLicence"
+
+                        <upload-form
+                               class="col-xs-4 col-sm-4" id="drivingLicence"
                                [required]="!noEnv" name="drivingLicence"
                                type="file" accept="image/*;capture=camera"
                                #drivingLicenceRef="ngModel"
                                [(ngModel)]="involved[i]">
+                        </upload-form>
 
                 <!-- Insurance policy input -->
-                        <input class="col-xs-4 col-sm-4" id="insurancePolicy"
+
+                        <upload-form
+                               class="col-xs-4 col-sm-4" id="insurancePolicy"
                                [required]="!noEnv" name="insurancePolicy"
                                type="file" accept="image/*;capture=camera"
                                #insurancePolicyRef="ngModel"
                                [(ngModel)]="involved[i]">
-
+                        </upload-form>
                 <!-- Car img -->
                        <img  class="col-xs-2 col-sm-2"
                              src="../assets/img/envcar.jpg"

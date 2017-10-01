@@ -66,16 +66,13 @@
 
               <!-- Car Photos Upload -->
                   <h3 class="hit-pic-h3">צלם את מיקום הפגיעה ברכב שלך</h3>
-                  <label class="btn btn-default btn-file">
-                      <input  required multiple
-                              name="hits"
-                              type="file" accept="image/*;capture=camera"
-                              [(ngModel)]="carImg.hits" #hits="ngModel">
-                  </label>
-
+                  <upload-form
+                          [(ngModel)]="carImg.hits"
+                           #hits="ngModel">
+                  </upload-form>
 
               <!-- Next -->
-                      <div class="form-group text-center space-20">
+                      <div class="form-group text-center space-20 top-spac">
                       <button routerLink="/case"
                               class="btn btn-success btn-outline-rounded btn-info"
                               [disabled]="!hitForm.valid"

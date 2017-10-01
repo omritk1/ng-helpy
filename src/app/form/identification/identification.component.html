@@ -4,18 +4,6 @@
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="row">
 
-
-                  <ul>
- <li *ngFor="let item of items | async">
-   <input type="text" #updatetext [value]="item.text" />
-   <button (click)="updateItem(item.$key, updatetext.value)">Update</button>
-   <button (click)="deleteItem(item.$key)">Delete</button>
- </li>
-</ul>
-<input type="text" #newitem />
-<button (click)="addItem(newitem.value, newIdn.value, newDate.value )">Add</button>
-<button (click)="deleteEverything()">Delete All</button>
-
                     <!-- ID input start -->
                     <div class="form-group">
 
@@ -76,7 +64,7 @@
                 <div class="form-group text-center">
                     <button class="btn btn-success btn-outline-rounded btn-info"
                      [disabled]="!identificationForm.valid"
-                     (click)="save(identificationlForm)"
+                     (click)="addItem( newIdn.value, newDate.value)"
                      routerLink="/polisa">
                      התחל בהגשת התביעה
                     </button>
