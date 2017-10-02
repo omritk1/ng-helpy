@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2/database';
+import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
 
 
 @Component({
@@ -6,27 +8,53 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './hit.component.html',
   styleUrls: ['./hit.component.css']
 })
-export class HitComponent implements OnInit {
-  public selected = 0;
+export class HitComponent {
+  @LocalStorage('selected') public selected = 0;
+  @LocalStorage('img1') img1 = 0;
+  @LocalStorage('img2') img2 = 0;
+  @LocalStorage('img3') img3 = 0;
+  @LocalStorage('img4') img4 = 0;
+  @LocalStorage('img5') img5 = 0;
+  @LocalStorage('img6') img6 = 0;
+  @LocalStorage('img7') img7 = 0;
+  @LocalStorage('img8') img8 = 0;
 
+  public carImg = [{}];
+  items: FirebaseListObservable<any>;
 
-  img1 = 0;
-  img2 = 0;
-  img3 = 0;
-  img4 = 0;
-  img5 = 0;
-  img6 = 0;
-  img7 = 0;
-  img8 = 0;
+  constructor(db: AngularFireDatabase) {
+    this.img1;
+    this.img2;
+    this.img3;
+    this.img4;
+    this.img5;
+    this.img6;
+    this.img7;
+    this.img8;
 
-
-
-  public carImg = [];
-
-  constructor() { }
-
-  ngOnInit() {
+  this.items = db.list('/cases');
   }
+
+  updateItem(key: string,
+            frontRight,
+            frontDoorRight,
+            backDoorRight,
+            backRight,
+            frontLeft,
+            frontDoorLeft,
+            backDoorLeft,
+            backLeft
+   ) {
+  this.items.update(key, {  frontRight,
+                            frontDoorRight,
+                            backDoorRight,
+                            backRight,
+                            frontLeft,
+                            frontDoorLeft,
+                            backDoorLeft,
+                            backLeft  });
+  }
+
   addImg() {
     this.carImg.push('');
 

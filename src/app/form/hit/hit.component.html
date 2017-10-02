@@ -86,11 +86,20 @@
                   </div>
 
               <!-- Next -->
-                      <div class="form-group text-center space-20 top-spac">
-                      <button routerLink="/case"
+                      <div
+                      *ngFor="let item of items | async ;let last = last"class="form-group text-center space-20 top-spac">
+                      <button *ngIf="last"
+                              routerLink="/case"
                               class="btn btn-success btn-outline-rounded btn-info"
                               [disabled]="!hitForm.valid"
-                              (click)="save(hitForm)"> המשך בהגשת התביעה
+                              (click)="updateItem(item.$key,frontRight.value,
+                                                            frontDoorRight.value,
+                                                            backDoorRight.value,
+                                                            backRight.value,
+                                                            frontLeft.value,
+                                                            frontDoorLeft.value,
+                                                            backDoorLeft.value,
+                                                            backLeft.value)"> המשך בהגשת התביעה
                       </button>
                     </div>
 
