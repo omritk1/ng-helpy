@@ -8,29 +8,33 @@
                 <h3 class="hit-chk-h3">סמן את מיקום הפגיעה ברכב שלך</h3>
 
         <!-- Car Div Start-->
-                <div class="row car" (change)="selected = !selected && !selected = !selected " >
+                <div class="row car">
 
                 <!-- Car Front Right -->
-                      <input [required]="selected" name="frontRight"
-                      [(ngModel)]="hit.frontRight"
+                      <input [required]="selected==0" name="frontRight" #frontRight="ngModel"
+                      [(ngModel)]="img1"
+                      (click)="select1()"
                       type="checkbox" id="btnControl3" class="boxState"/>
                       <label class="btn3" for="btnControl3"></label>
 
                 <!-- Front Door Right -->
-                      <input [required]="selected" name="frontDoorRight" #frontDoorRight="ngModel"
-                      [(ngModel)]="hit.frontDoorRight"
+                      <input [required]="selected==0" name="frontDoorRight" #frontDoorRight="ngModel"
+                      [(ngModel)]="img2"
+                      (click)="select2()"
                       type="checkbox" id="btnControl2" class="boxState" />
                       <label class="btn2" for="btnControl2"></label>
 
                 <!-- Back Door Right -->
-                      <input [required]="selected" name="backDoorRight" #backDoorRight="ngModel"
-                      [(ngModel)]="hit.backDoorRight"
+                      <input [required]="selected==0" name="backDoorRight" #backDoorRight="ngModel"
+                      [(ngModel)]="img3"
+                      (click)="select3()"
                       type="checkbox" id="btnControl1" class="boxState"/>
                       <label class="btn1" for="btnControl1"></label>
 
                 <!-- Car Back Right -->
-                      <input [required]="selected" name="backRight" #backRight="ngModel"
-                      [(ngModel)]="hit.backRight"
+                      <input [required]="selected==0" name="backRight" #backRight="ngModel"
+                      [(ngModel)]="img4"
+                      (click)="select4()"
                       type="checkbox" id="btnControl0" class="boxState"/>
                       <label class="btn0" for="btnControl0"></label>
 
@@ -38,26 +42,30 @@
                       <br>
 
                 <!-- Car Front Left -->
-                      <input [required]="selected" name="frontLeft" #frontLeft="ngModel"
-                      [(ngModel)]="hit.frontLeft"
+                      <input [required]="selected==0" name="frontLeft" #frontLeft="ngModel"
+                      [(ngModel)]="img5"
+                      (click)="select5()"
                       type="checkbox" id="btnControl7" class="boxState"/>
                       <label class="btn7" for="btnControl7"></label>
 
                 <!-- Front Door Left -->
-                      <input [required]="selected" name="frontDoorLeft" #frontDoorLeft="ngModel"
-                      [(ngModel)]="hit.frontDoorLeft"
+                      <input [required]="selected==0" name="frontDoorLeft" #frontDoorLeft="ngModel"
+                      [(ngModel)]="img6"
+                      (click)="select6()"
                       type="checkbox" id="btnControl6" class="boxState"/>
                       <label class="btn6" for="btnControl6"></label>
 
                 <!-- Back Door Left -->
-                      <input [required]="selected" name="backDoorLeft" #backDoorLeft="ngModel"
-                      [(ngModel)]="hit.backDoorLeft"
+                      <input [required]="selected==0" name="backDoorLeft" #backDoorLeft="ngModel"
+                      [(ngModel)]="img7"
+                      (click)="select7()"
                        type="checkbox" id="btnControl5" class="boxState"/>
                       <label class="btn5" for="btnControl5"></label>
 
                 <!-- Car Back Left -->
-                      <input [required]="selected" name="backLeft" #backLeft="ngModel"
-                        [(ngModel)]="hit.backLeft"
+                      <input [required]="selected==0" name="backLeft" #backLeft="ngModel"
+                      [(ngModel)]="img8"
+                      (click)="select8()"
                         type="checkbox" id="btnControl4" class="boxState"/>
                       <label class="btn4" for="btnControl4"></label>
               </div>
@@ -66,10 +74,16 @@
 
               <!-- Car Photos Upload -->
                   <h3 class="hit-pic-h3">צלם את מיקום הפגיעה ברכב שלך</h3>
-                  <upload-form
-                          [(ngModel)]="carImg.hits"
-                           #hits="ngModel">
+                  <div *ngFor="let img of carImg; let i=index">
+                    <upload-form
+                    [(ngModel)]="carImg[i]"
+                    >
                   </upload-form>
+
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary" type="button" (click)="addImg()">הוסף תמונה</button>
+                  </div>
 
               <!-- Next -->
                       <div class="form-group text-center space-20 top-spac">

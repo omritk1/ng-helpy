@@ -20,12 +20,5 @@ export class UploadFormComponent {
     this.currentUpload = new Upload(file);
     this.upSvc.pushUpload(this.currentUpload)
   }
-  uploadMulti() {
-    let files = this.selectedFiles
-    let filesIndex = _.range(files.length)
-    _.each(filesIndex, (idx) => {
-      this.currentUpload = new Upload(files[idx]);
-      this.upSvc.pushUpload(this.currentUpload)}
-    )
-  }
+
 }
