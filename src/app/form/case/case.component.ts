@@ -1,4 +1,5 @@
-import { Component, ElementRef,OnInit ,Directive} from '@angular/core';
+import { Component } from '@angular/core';
+import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2/database';
 import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
 
 @Component({
@@ -6,7 +7,7 @@ import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
   templateUrl: './case.component.html',
   styleUrls: ['./case.component.css'],
 })
-export class CaseComponent implements OnInit {
+export class CaseComponent {
   public witnesses = [];
   public noWitnesses = false;
   public click = 0;
@@ -20,15 +21,23 @@ export class CaseComponent implements OnInit {
   @LocalStorage('ExidentDetails') public exDit : string;
 
 
-  constructor() {
+  items: FirebaseListObservable<any>;
+
+
+constructor(db: AngularFireDatabase) {
+
+this.items = db.list('/cases');
 
     this.exDate;
     this.exTime;
     this.exCity;
     this.exStreet;
     this.exDit;
+    this.witnesses;
+  }
 
-
+  updateItem(key: string, exDate , exTime, exCity, exStreet, exDit) {
+  this.items.update(key, { Date: exDate, Time:exTime, City:exCity, Street:exStreet ,Details:exDit});
   }
 
   addWitness() {
@@ -50,8 +59,7 @@ export class CaseComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
+
 
 
 
