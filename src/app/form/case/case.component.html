@@ -103,6 +103,7 @@
                     <div *ngFor="let item of items | async ;let last = last"
                     class="form-group text-center space-20">
                         <button *ngIf="last"
+                                routerLink="/end"
                                 class="btn btn-outline-rounded btn-info"
                                 [disabled]="!caseForm.valid || !agreed"
                                   (click)="updateItem(item.$key, date.value,time.value,city.value,street.value,dit.value)"

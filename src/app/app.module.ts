@@ -25,6 +25,7 @@ import { HitComponent } from './form/hit/hit.component';
 import { CaseComponent } from './form/case/case.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
+import { EndComponent } from './form/end/end.component';
 
 
 
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
   { path: 'involved', component: InvolvedComponent},
   { path: 'hit', component: HitComponent},
   { path: 'case', component: CaseComponent},
+  { path: 'end', component: EndComponent},
 
 ]
 
@@ -53,6 +55,7 @@ const appRoutes: Routes = [
     CaseComponent,
     PaginationComponent,
     UploadFormComponent,
+    EndComponent,
 
   ],
   imports: [
