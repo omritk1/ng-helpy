@@ -56,12 +56,7 @@
               <!-- Uploading The Driving Licence -->
                     <div class="form-group" [hidden]="showUpload">
                       <label for="licenceNumber">אנו זקוקים לרשיון הנהיגה שלך</label>
-                     <upload-form
-                             [required]="!showUpload"
-                             name="licenceNumber"
-                             #licenceNumber="ngModel"
-                             [(ngModel)]="polisa.licenceNumber"
-                             >
+                     <upload-form>
                      </upload-form>
                     </div>
 

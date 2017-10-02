@@ -14,6 +14,7 @@ export class PolisaComponent {
 
   public showUpload = true;
   public polisa = {};
+  public polisaOwner;
 
 
   items: FirebaseListObservable<any>;
@@ -31,8 +32,6 @@ this.items.update(key, { carNumber: carNumber, polisaOwnership:yes || no });
 deleteItem(key: string) {
 this.items.remove(key);
 }
-
-
 
 
 

@@ -13,6 +13,7 @@ export class InvolvedComponent {
   public noEnv = false;
   public click = 0;
 
+public noInvolved;
 
   constructor() {
           this.involved = [{}]
